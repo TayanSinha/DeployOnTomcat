@@ -1,0 +1,448 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="DeployOnTomcat" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="764,3620" sap2010:WorkflowViewState.IdRef="DeployOnTomcat_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:uas="clr-namespace:UiPath.Activities.System;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="86">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Activities.System</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="59">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="DeployOnTomcat" sap:VirtualizedContainerService.HintSize="594,3555" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="s:String[]" Name="files" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" sap2010:Annotation.AnnotationText="This Process will start tomcat.exe which is present in Apache Tomcat folder&#xD;&#xA;" DisplayName="Start Tomcat" FileName="C:\Program Files\Apache Software Foundation\Tomcat 9.0\bin\Tomcat9.exe" sap:VirtualizedContainerService.HintSize="532,124" sap2010:WorkflowViewState.IdRef="StartProcess_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:StartProcess>
+    <Delay sap2010:Annotation.AnnotationText="It will add a delay of 5seconds to run tomcat server sucessfully" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="532,109" sap2010:WorkflowViewState.IdRef="Delay_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Delay>
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="This process will Open Edge browser and login to the port where Tomcat is running" AttachMode="ByInstance" DisplayName="Open Edge and go to Tomcat UI portal" sap:VirtualizedContainerService.HintSize="532,3131" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="e38c3dea-4234-4685-8ea1-2084a583d84b" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="open tomcat portal, deploy war files and show their state in excel file" sap:VirtualizedContainerService.HintSize="498,2883" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="ui:PasswordCredentials" Name="tcred" />
+              <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+              <Variable x:TypeArguments="x:String" Name="tt" />
+              <Variable x:TypeArguments="x:String" Name="k" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MaximizeWindow Window="{x:Null}" sap2010:Annotation.AnnotationText="It will maximize the browser window..." DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="436,67" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:MaximizeWindow>
+            <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="436,81" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick sap2010:Annotation.AnnotationText="It will click the manager app button from where we can login as an admin in Tomcat" ClickType="Single" DisplayName="Click 'Manager App'" sap:VirtualizedContainerService.HintSize="338,199" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e38c3dea-4234-4685-8ea1-2084a583d84b" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="http://localhost:8080/" DesignTimeRectangle="1009, 328, 140, 27" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Manager App'" FullSelectorArgument="&lt;webctrl aaname='Manager App' parentid='actions' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Manager App' parentid='actions' tag='SPAN' type='' class='' check:innerText='Manager App' /&gt;" Guid="74c1b3eb-4cf0-401e-87c8-ad485e761383" ImageBase64="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" InformativeScreenshot="b3bf367631deb0cabbfaf16424df394a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Apache Tomcat/9.0.64' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="1009, 292, 140, 27" ElementType="Text" FriendlyName="'Server Status'" FullSelectorArgument="&lt;webctrl parentid='actions' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='actions' tag='SPAN' type='' class='' aaname='Server Status' check:innerText='Server Status' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+            </Sequence>
+            <uas:GetUsernamePasswordX OrchestratorCredentialName="{x:Null}" TimeoutInSeconds="{x:Null}" sap2010:Annotation.AnnotationText="It will get Credentials to login to Tomcat portal which is saved in windows credential manager" AutosubmitTimeoutSeconds="10" Credential="[tcred]" CredentialName="UiPath: localhost:8080" CredentialsSource="CredentialsManager" DisplayName="Get Tomcat Username &amp; Password" sap:VirtualizedContainerService.HintSize="436,109" sap2010:WorkflowViewState.IdRef="GetUsernamePasswordX_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uas:GetUsernamePasswordX>
+            <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="This process will put username which is saved in 'tcred' variable " ClickBeforeMode="Single" DisplayName="Type Tomcat login 'Username'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="436,94" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="e38c3dea-4234-4685-8ea1-2084a583d84b" Text="[tcred.Username]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="589, 150, 222, 28" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'tomcat'" FullSelectorArgument="&lt;ctrl name='Sign in to access this site' role='dialog' /&gt;&lt;ctrl name='Username' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Sign in to access this site' role='dialog' /&gt;&lt;ctrl name='Username' role='editable text' automationid='' /&gt;" Guid="20cc0f25-bfff-4375-a0e2-64966e8cfed6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOIAAAAgCAYAAAAPMKRoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHiSURBVHhe7dxNToNAGIBhz8dOXGvbeBZrqqm7mlBdtBsvwSm4Qq/AAcb5gG/4NTZtKTPNO+ZJgBkomzcQF9xFUWQATIsQAQ+4EOP4wSxXa7PZ7sx29wNgJNKYtCbN9UJcvn0MngRgHNJcL8TP730x+Tibu0kAl/c0XxStbb727pgLUSvVfQDj6fZGiMAEbi5EGUPHAZ8RIuABQgQ8QIiABwgR8MBZIaYHYw7p8Ny1dO+BEBEiQgQ8cHKIEoAbeWYSOZ5kJq8OyagDSc3B/qXuJLsdJSbTxXr+wLXzLLHHGmtlHNLeOr2GDL0OEIqTQxStp1ERYW6yROclPt2XbTuqgJKiKp0rI9PrFHPVumGyvv6d1j1YMuq1QBguF6LdKZ9e9bxEVR6rnog6V57o1tXXaUfWIosaQ3+3dQ+WDHcOEAjPQuysU7Kg8fra/N3mtiBEhOhyIf77anpMiOV2c060X1flWu31hIjQnRWie13Up5XuV6MO5PgQu/+YqZ+oOuyVmus79yBDrwuE4rwQPUSICBEhAh4gRMADNxciECJCBDxAiIAHCBHwwJ8hyqfdZILPKQLjmi2ei9YGP6fIB4aB63p9H/jAcPHJfRsjn9wHxiWNvazW5j6O+yECmA4hApOLzC8HUorRVBFYwAAAAABJRU5ErkJggg==" InformativeScreenshot="2be63ee92c0961132aef51fa5797e6f8.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='localhost:8080/manager/html - Work - Microsoft​ Edge' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="523, 156, 54, 16" ElementType="Text" FriendlyName="'Username'" FullSelectorArgument="&lt;ctrl name='Sign in to access this site' role='dialog' /&gt;&lt;ctrl name='Username' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Sign in to access this site' role='dialog' /&gt;&lt;ctrl name='Username' role='text' automationid='' check:text='Username' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADoAAAAUCAYAAADcHS5uAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEeSURBVFhH7ZLhDQMhCIU7nxs6i1O4gis4AFV5ekBsoj/rSfOSyoHyAR/nHL1BF/Q0XdDT9EbQQKn8gvjonKeYM0Uvff+pC8p6KaiPmYalIGLgK5bCE5tjLDc2JzkfKedIYQSLBoYWBRN+m1P++1YnbNSAWLjLB8OxBboy8SeGmyLiUUiOvp3bd1loV4XufpPD/eh31rfwNhriZ3dAG6CYnLyw5VjjeJ4oF9hki1FnvRXjDZOj7xS1qY2AqToVqJ3ODx+6zB2bNYe1DsqQfeVV3A7obDuEBChWQyS09TKdYXVALlIBQeugYgWRN95cBa1x4o6ZFCgn13F1k9PSazomYNcXha2DAg6WU8HeBa1ns762+Qb0XF3Q03RBz5KjL+ubwiTLexfTAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="This process will put password which is saved in 'tcred' variable " ClickBeforeMode="Single" DisplayName="Type Tomcat login 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="436,94" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="HardwareEvents" ScopeIdentifier="e38c3dea-4234-4685-8ea1-2084a583d84b" Text="[tcred.Password]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="589, 186, 222, 28" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FriendlyName="'••••••'" FullSelectorArgument="&lt;ctrl name='Sign in to access this site' role='dialog' /&gt;&lt;ctrl name='Password' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Sign in to access this site' role='dialog' /&gt;&lt;ctrl name='Password' role='editable text' automationid='' /&gt;" Guid="63edfdc3-e612-4fbe-be32-70a1f3d75bd4" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOIAAAAgCAYAAAAPMKRoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAESSURBVHhe7dzBiYQwFIDhrc8iPAiercdarMIWbMECspOdjShk9iDr+Bi+wAfhBb395JavpmkScC8hQgCHELuuS33fp2EYgIvkxnJr+/a2EPNB27aHQ+AaubV9jFuIudKyB663b24LMV+ZZQ9cb9+cEOEmQoQAhAgBCBECECIEIEQIQIgQgBAhACFCAKdDnJb0s9Z5/GM2pnl9zpapfFuZjXN6jpY0/f6rOoMPdTLE6ZFHWSWUymyL6bHWOY0vZmMp87FKxLUZfCo3IgRwOkTg/wgRAhAiBCBECECIEIAQIQAhQgBChACECAFUQ/ScIrxX9TlFDwzD+7x8YDjLB7nSfGUC18iN7SPMDiEC9xAi3K5J38z75cJDOxZJAAAAAElFTkSuQmCC" InformativeScreenshot="d258c3923a56bfba4d7ab6ac6850725b.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='localhost:8080/manager/html - Work - Microsoft​ Edge' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="523, 192, 50, 16" ElementType="Text" FriendlyName="'Password'" FullSelectorArgument="&lt;ctrl name='Sign in to access this site' role='dialog' /&gt;&lt;ctrl name='Password' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Sign in to access this site' role='dialog' /&gt;&lt;ctrl name='Password' role='text' automationid='' check:text='Password' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAAUCAYAAADGIc7gAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE/SURBVFhH7VTREcMgCO182dBZnMIVXMEBKA9Rwaa5S68fSSt37y4BgffA5LFtG/0ilrC7YQm7G/5BWKBUyFihFPzhyyJmohydbxJmxITE0jLFHr8wTgl7eb8wPhUW3B01W0TBZiVR2PNh8y3GQLikoD0i5R5DP82DGaLCO+EGtVx7ljmmM8Iqg06oASJH8Xmjez4m34cBIZxvhyCEKtEh2A8Az5aLvHchKvJYGCbQzH5fIGdMi0gDd+69L0d+5oeSIvepcQxJ/G5zCrPpni8x8PT1x4CG7+AqNkDUtElXREU7YpNPcwJfGdSpgizBM8JQ+xvCpr8jasxF9nOtD8SZTlbyQpqvZK+Ds8dXcQjzsZZ7XhhDxKjlLF30vDrZaqM936gxk7Fk+5abGaKzMH+WOR//PH4LS9jdsITdCxs9AUFuIoMaPJW8AAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Sign in' button" sap:VirtualizedContainerService.HintSize="436,52" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e38c3dea-4234-4685-8ea1-2084a583d84b" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="663, 232, 70, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'push button Sign in'" FullSelectorArgument="&lt;ctrl name='Sign in to access this site' role='dialog' /&gt;&lt;ctrl name='Sign in' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Sign in to access this site' role='dialog' /&gt;&lt;ctrl name='Sign in' role='push button' automationid='' /&gt;" Guid="75f5e167-75f8-40aa-87eb-1089fcaacd5b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEoAAAAkCAYAAAAuLqxbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJnSURBVGhD7Zo9a9tQFIa990fkJ5T+Ao0B78Wjt2YpmEzZsnaMl+LNGTJoEThzB3sIVGCK3UD9gQYbYuOKIPyFYxkTeHvulavI1qW92DJ2yLnwwL33SEh6fM6RB6XS6TSY/8OiNAlFffh4jnefLKQ+lxlCuBBOYqJYUhzhJCZKdSBTZlG6sChNWJQmLEoTFqUJi9KERWnCojTZi6jT8hDdJ4Rj1HmQ+8Y3D3bjAacbx+9C1h7D/tHGiSKWJMmLuvHwW8rp46z4C5lbF63OQMYunCWwHONq85ytqcH06GLeIzLKeHIkL8qe0Z0vUPqqiL1ikheVH6BFiYOnGUyzuha7dsX+EDm5/omrzgI+bQHP6PbmGGGJikUxa0hzoOsMZXaKMer1FSXroCJK3BUZu5p7Q1Qm8hS61hSFhH6w5EURJyaV26pH+Z6H3GWwHxVlyMxbon7XxPsvTRR6wu66KJ9KKpev4ayxCGLm+nWUopZzlKwaDKpJ2QKc9sY527EXUQFVZO8oI8Tzey4M2ouKkvOJ99JbpJx1US07GgPq5dU6RCFKziOxXvAi2ZU9igow7ud0tzNc0zwmijJGCJTHaogK1yEaosL1biQvil7XXWeAC/HGM/tBv6DMyVIsKipzH5STTaVn5Jsw3We5fjuibqk3iBtcDV829e8yFhWVumyjJOWIQb2qMX1jGbUt5Sk9laphHweHE2U9ou70kc1XYdz0YYtf/2+2HSGHE1V8+Qshhj8Zo1AMSvQYOZyoVwaL0oRFacKiNGFRmrAoTViUJjFR/JFGHOVHGvzZzzrChfKzH+bfsCgt0vgDgXT/V0InmKUAAAAASUVORK5CYII=" InformativeScreenshot="b526e4fd8368e2170424cf03d86e3453.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='localhost:8080/manager/html - Work - Microsoft​ Edge' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="741, 232, 70, 32" ElementType="Button" FriendlyName="'push button Cancel'" FullSelectorArgument="&lt;ctrl name='Sign in to access this site' role='dialog' /&gt;&lt;ctrl name='Cancel' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Sign in to access this site' role='dialog' /&gt;&lt;ctrl name='Cancel' role='push button' automationid='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEoAAAAkCAYAAAAuLqxbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAInSURBVGhD7ZqhsqMwFIb3+eqqm4dAV8fgY2owmGgMpgaDwmBiYjAYzDUY1L8nUHq5S6Z7Zu8wc7tzMvPNkOQQyEdOWpFfp9MJwt8RUUyeos7nMy6XC5RSAhFcBCc7USJpT3CyExULFJSI4iKimIgoJiKKiYhiIqKYiCgmIorJgaISmNJhGPEsoy+ho7EHUPXhiXB5pO8fOEhUgtx9LHL6BkVmYKsO4+iQR+MP4C1E6RpDeE2XI9m0p0WBbFM/lHcQpZugaUCdxPtNWF0ThcxlwtA+hD4m17meWv/oo1Wa1f3nfbQ6bWhPS7hhbQzxFtfNWD9aVO5oY3qRZjovYNMrXdPk5xTtUYW+eXJ0q7/jpg3uXRCw9CVlRxpIRGORUl89dNR+Q0u3j26Rc7We1Ezwdh3rh4sy4e3XyUdIshqedvlpWlfCVtRmcnP9A61RIE902cKs4+Q58sxR9L70VWSsb3KIKEVfNigY6jTSXyIslNEX0CE15wm9ErXU58uh+fqr+RDVlZu2lbcQpTRNLKiiVPEVrDHIClpFvqHNvCIttDgag+R6oxSiCkOUngPX1NPImxqlsvDhMZTmhU6gaLy7d/GxvslBoojEoHTD/MWXMmHsKkqdz78OIa0cxXBEKXWFbTfjPTbzkMb9s5Ge0dfL3vg2ov4zRBQTEcVERDERUUxEFBMRxUREMRFRTEQUk50oOaSxJ3pIQ479fCW4iB77EV4jolic8Btf5Dwa0PwMPQAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="436,52" sap2010:WorkflowViewState.IdRef="Delay_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Delay>
+            <Assign sap2010:Annotation.AnnotationText="In this step we will get all the file names present in the 'war' directory and save those in files variable" DisplayName="Assigning file names in variable" sap:VirtualizedContainerService.HintSize="436,124" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:String[]">[files]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles("C:\Users\TA40128609\Documents\UiPath\DeployOnTomcat\war")]</InArgument>
+              </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Assign>
+            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="This loop is to get all the war file names saved in files variable one by one and deploy those in tomcat " DisplayName="Deploy war files in tomcat portal" sap:VirtualizedContainerService.HintSize="436,924" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[files]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="x:String">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:String" Name="currentItem" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Select war files and click deploy in Tomcat manager" sap:VirtualizedContainerService.HintSize="400,756" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick sap2010:Annotation.AnnotationText="It will click select war file button in the manage tomcat portal&#xD;&#xA;" ClickType="Single" DisplayName="Click Select File" sap:VirtualizedContainerService.HintSize="338,124" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e38c3dea-4234-4685-8ea1-2084a583d84b" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="http://localhost:8080/manager/html/upload?org.apache.catalina.filters.CSRF_NONCE=1BAB8767F49B68AE52F6739C2DBB18E4" DesignTimeRectangle="505, 317, 253, 21" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tableRow='10' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='file' tag='INPUT' class='' aaname='' /&gt;" Guid="4b254160-306d-44b5-a4c1-dc61f4e1e70a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQEAAAAZCAYAAAAxHpu/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPpSURBVHhe7Zy9bioxEIV5QaQIKa+SIqJCvAIVaUl/W6K0yROkoE5BySP4+n9nxl5jL7vRIs6RjsSuf8be7Hy2icRCQRD00AIEIOjBFSFwPp/VbrdTLy8v8Eg2z9M8VwiasyIEzAv7+fmpLpcLPJLN8zTPFYLmrAgBs3LlXmT4NpvnCkFzFiAwsQEBaO4CBCY2IADNXYMgcHxdqMWi8/qDlH+s9b21OpL6s/LPXi3J2Dsv1f4nlGc+5/qqcB8EvjYm5lZ9+eug8/tKLTbybqW+t34uK3X4Zz77/u39NNYtsuMfOk5oVmqEwEntn/Qf/2mvTuGeT6oIgruAQCGx/xQCC7V65/89GA6Bszo8k/5o4gMCUEFtEOhJ8NPbsgPDvUOAemoIPK/Uyqzav/6m1q0Q2H77SypAACqoCQL2GPB6zJZFewjsDRj8Vnv5dmJ12HFC9GeBEsrojkObtRNlLmFDeeVKf61c1q2NQVyEgE4iB4ODTmGnFAJfahtj9iS5B0CoY9uXdgK/Bw2fUJ9DKFFPXTf+A4kr+inFsOPpKeudr9/pbLak33HB9qhqgIA7CsiETmwhQOrZ6y5h2K7hclTrpG7YRfijR4CEKSOJb4DQjcX1U3UkYYncObbthUBDDOJrEAgvfXjZOQRyW/y+pK09DvB4CSCY+uva8UsoRJhl5sTikzmYPmM7MQcLklA3gC70468ZMKEhmggCJDlYIqV9UCgkOw3al/0svoSk9djOwMXJ1mXjybgPAi0xiK9DQIskF4MASwIjkSRMlRBgSWfk2nUrLhFtJ8TGr2XHHfpN2lEouM/Z5LXz5fFMHDendO5yDNAwTXYcyENArKbaHQQykJF9eRDI1ZsdIYizwBoIgaYYxFUQ8C+4uWYQSJLpdgi4VZnPwTjXJ0tsoRIE0nZiR+GvY3w2X3KflQMCU2mULwbZ/SIEbtgJCLukJDHZKl3wQAg0xSCug4CWX/W3GwKBP9kJFETbCZUgkLaTECCyc/RlmZ1AJ0BgKrVBwCcxT4bSuV5bJB1N+pbvBHg7X1f0E3cYNubIx4GWGMTVENCKq3S8n0tsCgWqSgjIhKRJmChX18UvQkC0c/Py8ROwmbrhWia668ddAwJTqRECzuxbem2WCFcgkLQXxwu27RYrL48rEtknZSjv3aZnxtNbLuvWxiBugUB46fl9f887n6xGtRDQ8okf+qSJlUjUDfHLENBi7QS47Hi6Pnl8Pt8uBiAwlQZBAK53HwQgaC4CBCY2IADNXYDAxAYEoLkLEJjYgAA0d0UI4JeFxjd+WQi6B0UI4DcGx7d5nviNQWjuihCAIOgxBQhA0ENLqf+T2yLF86NkrgAAAABJRU5ErkJggg==" InformativeScreenshot="ede8103654e21b2563bff8f9d7502a87.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='/manager' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="349, 320, 151, 15" FriendlyName="'Select WAR'" FullSelectorArgument="&lt;webctrl tableRow='10' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='SMALL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SMALL' class='' aaname='Select WAR file to upload' check:innerText='Select WAR file to upload' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJsAAAATCAYAAACHgn85AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAN7SURBVGhD7VjbbeMwEHSNBtyQ4VacBq4Hu5B8uAwd90XNPij7Akf34gBCJHHJnZ0dMlEOy8TETphmm9gN02wTu2GabWI3eLPdL8vhcFiv03V56NBT8NzLctPHt4PWj3yU7+Wuz4zHcj0dluMHRH5el2OLc+8UtzPUi9d5qxLJIXE/IF+R+08G63Jcrp/6/DbclkvTxvcFzcaN84kfH8fXDfcOs20VX4wRv+OpcURjjOLOlxaba2GzRWOpOaNYHa5WNNjXzVby+G78LrPVxqJJL5L5brNpI9cC6LnF3tsc5E08XB1WQy3AqMmbzU85DNNsgi+cbBXYlG0hvmKT0Wx6OkhsXpfFtXEWWQiO4gk0Z20kxVM+NZ3GMz9sGhijauioycPmc53IEw2WzZbrzHCa9hjUY+OUTYbxjZY6rsxL1oo9ynPrnFKbjaWDBXVpv0W2zdbghKlOqWAo1xA35guO8/wpCg16ttNoHZtH95qbeFiD6R6LxDFZ39flajDoRolidbh6xmYb1lnA8wixnG+gyytmi8/Gyc3dzuk3cazF57TNE/XzHwgd4PAulhB1YmHzsAF0D/OMnCTfED0JFwD5qCAnDAtBvNFM8Rl5CKwZ8Sr5GbBWV0++d4InXVY4syUdfkWzwmyYE+NH94yNnJqjjzk9CJ6DYWA2Ay4qyXNjlCAkNGfHS9apiTBSwRHEgcbtp77mNVtumg/CjnjEDYQnm8xB4Qq8ZDapM+ev13Y8UvNw3YCkmdc31ifjGo9zn+XkcauBPszWMdZseLisULPVgzEhES8LJiBZuh/s4FQE4qnZhMPlrubSd7Jmm/fRvjj7uoOaQo7cDH035N/gGoP15PtyUxVwPJIOuG7AK2bDWjB+dM8Y1UUIz8monoOhn2yyozFZAy8C78Ki7hRwYyEZF7I+x53QhU4FF2h5+N8YwSC0Jv0bxOdEAQxeqMpsxr9sLsHVOm5KWefAxJ5H1cyRLoErxwazwVzHwem9lVPGOj/N0WOfcDD4X6MatF65WWIwGwcBeC7Eq8EsdiUmEBH06g3Qotq7SLRD143rxfy+eR64SUZxVmfJw+XCJoWGNbg6Cz07TPuuhTTQ5g71aHA90S9PZzb9OpSY2CM08UZO9EbTK+mG/T61fMDB8ORvtom/HVubbm9Ms/3jmGab2A3TbBP/JabZJnbCsvwER1xOY6/WLjoAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NClick>
+                    <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="Delay_4">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Delay>
+                    <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="This will type the war file name and location in the file name field" ClickBeforeMode="Single" DisplayName="Put file name " EmptyFieldMode="MultiLine" sap:VirtualizedContainerService.HintSize="338,109" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="HardwareEvents" ScopeIdentifier="e38c3dea-4234-4685-8ea1-2084a583d84b" Text="[currentItem]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="201, 410, 237, 15" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Edit'" FullSelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" Guid="4b64533f-6277-4196-8111-7632771db132" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPEAAAATCAYAAABBR+uAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVHhe7dMBDQAADMOg+ze962gCHrgBaRJDnMQQJzHESQxxEkOcxBAnMcRJDHESQ5zEECcxxEkMcRJDnMQQJzHESQxxEkOcxJC2PbJASJ4qgGHOAAAAAElFTkSuQmCC" InformativeScreenshot="20b3abefd861f43d5a4e5b1c906ee105.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Open' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="138, 409, 54, 15" ElementType="Text" FriendlyName="'File &amp;name'" FullSelectorArgument="&lt;wnd ctrlid='1090' title='File &amp;amp;name:' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1090' title='File &amp;amp;name:' check:text='File &amp;amp;name:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADoAAAATCAYAAADBGB7WAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEASURBVFhH7VPRFcMgCHQq52EbhnEXZ3EDKokmaIkmTT8a68e9hwaOuwgmhED/gGl0NEyjo0EYdQTGkBGw6Cl4JGssoc85OX4WKqM9E9Poz+OEUXlf5SxjnUcdyBV1jJSPUK5D+u5gXxMDrqxxOze4QB6tyqFqcLGfRfI5J6K5o9zg2KiMIyJ5IUByZhMsoPVDNt5Yk4UuNcJcwXGggXPaRkWRei/i4k8mbK+i1SrnZGKF0qPHcUrDiptGtdeR6InM9Z7QKj0ucbRxY0c5rvblDTWnOMvxWgRrPXpnjhUNXx1d/laPzqXR5VdMdRYIPnlRPmsa2kbHxjQ6GqbRsRDoBaFqBwMxkChkAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NTypeInto>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Open'" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e38c3dea-4234-4685-8ea1-2084a583d84b" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="470, 434, 88, 26" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Open' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Open' check:text='unchecked' /&gt;" Guid="882028ec-c7d1-41ac-91a4-b1a93a649285" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFwAAAAeCAYAAAChf3k/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEzSURBVGhD7ZbBEYQgDEXpiW6oZG+0QitUsWc7sIOsKChB3HFGN8LOP7xDMHB4gT+qcRwJyAHhwkC4MEy4er3BD2COWVFpBtdhjlkRG4ZhADcA4cJAuDAQLgyEC9OucGdIKbWira/3dUabwmfZmqxPa56s/g/pDQpf5BpXrHtLWhly+VqHtCf8UGwYRLr1jkx4AS70ViJnPiPFUTor7rFbVD3xYtoUri353bf85gd5k7TUNwsuhpHiaIqnRWzcY9y6vg1DjjaFn73ha8YP5EwcBrvdkVlyuWd/hgTtCT+V4aWsbM/hwCD8mN1zD3LyzC3q3TBq+Qzh3yn+w/mNX2QZo+vfy1hBpFzlGVl3AOHCQLgwnQrvFwgXBsKFOS0c3AtzzIpKM7gOc5wX4PdAuDAQLspIHzXPr3L4gVkTAAAAAElFTkSuQmCC" InformativeScreenshot="051484c99fce1e11680b649a6dc3b179.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Open' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="570, 434, 88, 26" ElementType="Button" FriendlyName="'Cancel'" FullSelectorArgument="&lt;wnd ctrlid='2' title='Cancel' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='2' title='Cancel' check:text='Cancel' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFwAAAAeCAYAAAChf3k/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE2SURBVGhD7dbrDcIgFIZhdmIblmEVFugQjNINusGRaz1EtCSWkyZ8P97E3jR5wKPqOA5CcgFcOIAL14Bv24YmxI0/wPd9RzcGcOEALhzAhQO4cAAX7kHgnqxWpFRJW/Ld+2bkyChN1veu3dszwL0lHZCNa89Zfjy1pcDzzm6wxVsJPO1uQ653reQMGzXGlfMFyZrzmraePdeOqHNBy7cpn6+fuxr48LzmMPF1QKsL4CJ8BczY7QLUZxhseCbfsxr4xQ7PmHVXcnCOxI6/vWezu0tpwVYCv5rhDV6891/w3uIuBR4qO7j7LyVeqyMngQ2A/xwpA6NmYs8AjyVM9lU/5zr78dOGzMgOP4/f79f/0QytN1LWCuDCAVw4gAsHcOEALhzAhbsER/fHjRtwND+ACwdw0Q56AQ92RgtlHUC3AAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NClick>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Deploy'" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e38c3dea-4234-4685-8ea1-2084a583d84b" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="http://localhost:8080/manager/html/upload?org.apache.catalina.filters.CSRF_NONCE=1BAB8767F49B68AE52F6739C2DBB18E4" DesignTimeRectangle="505, 350, 58, 21" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Deploy'" FullSelectorArgument="&lt;webctrl tableRow='10' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='submit' tag='INPUT' class='' aaname='Deploy' check:text='Deploy' /&gt;" Guid="00a4e795-c209-47a9-a10c-931d234ee0f9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD4AAAAZCAYAAABpaJ3KAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGBSURBVFhH7ZjLDYMwDIazYKROwwGxBqcwSSrG6IEJODKCW+cBcWpSKKkqHpF+qeDEzmc7qYSAk44LvO97qOsaiqI4pJANGf0YwdHQti0Mw3BIIRsy+jGCY1a4BUcSMvpxgV/gCelSgBCxJKgHP3+tjP9Ss7Yc2gYebaxrZDb4XYGn3q/V7sBN1W8KOv/uoUCyR6EDdRMgGwWVtwfrYv+2m/h5sunGecO9ovFnlB3cBBYVaPOsDVR152wWfEqGe3Y+iX9uXWhLJWJGvwWPNuU3bRMRAURrQ/9vsUgiMLk+eeHvtLKDh61O2jOQrYgFJ9UxxyIGZ+YRcDvX2HH9gjZHZQZPt2FyLuqrirvnVxz9SvSSNkdlBX//O4vOuLvoSKuPADQRxD8BZRLm4mA3jbE+aBu4CzYpqIIXudXDlrUAsqwme9AdcWLnbnUvux8m/oy+Bt8uB76wNT/JJCbqwJQOAm59LW1z1P7B/VFaUW3UH8H/Kxb8tF9gTvvN7WzjpOAAT0DyHIbqPiFBAAAAAElFTkSuQmCC" InformativeScreenshot="994b5715ffd42328505a9c0740a554b6.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='/manager' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="17, 292, 1284, 23" FriendlyName="'WAR file to deploy'" FullSelectorArgument="&lt;webctrl idx='6' tag='TABLE' /&gt;&lt;webctrl tableRow='9' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='header-left' aaname='' check:innerText='WAR file to deploy' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAABQgAAAAbCAYAAAAwGmL8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPuSURBVHhe7d09ThtNHMBhn4aKK+QASFQUbnKDVDRvT0HPKehyjCinSJ9j7OvxzszO1+J1IBGyn7/0yGTZb7qfxspuOszT09N0e3sbfjTGGGOMMcYYY4wxxlz4lD0wB8L9fn/8BAAAAAAuXxcIwwYAAAAA4PKFxYLhswuE06//AAAAAIALt7qCcLQzAAAAAHBZBEIAAAAAuGICIQAAAABcMYEQAAAAAK7YhkD4bXq920273ZfpZ972dXrehW276eHlW97352PYdjO9/uj32z1+zfslv19u5t91ymv1yuPC9evrxmve3U+/B8f+W6N39w4/7qeH8GyDdwkAAAAAf2LTCsIu/H3/kgPdEqsGMazcbxDJUuh7/l5sPxnB+gD4oYEwXP/DApxACAAAAMDntikQppCXVgtWK/9SiBvEqxTunh8HIfBgGAhPRrVTAfAdgfDDA5xACAAAAMDntikQ1mEqRq+7++m1XLkXVwsuXzkuQt1K2Do/EMZzZvO1T64grFYyFishK+25l+vP50/Wjo+q1ZWHd9Q9S3q+tM/yTvL7eByt0DwYvMcq1h7kd9n9PQYrQQEAAAC4etsCYRXd4s8hUsUIFaJUF/uqQDWOfsNAeHKVXB8A3wyETSib911Z0Te4dhvVxlEzGV97uV7zHuL1upWZ6fpt5Gvub9M7z++pf28AAAAAsDEQFmErRqhjlCqCVRvetoS1HMRaq3EwOC8QtveRItow8HWBMJ6rup/RtqgNeitBcDm2jnj9O2qetTq+DYBr54vP3t0bAAAAAGwOhEu8ergrolMOUjdzuMqxqo94KVCVYa0OYimmnYpY/blPB8Le8BptwOuCXjB4tqgPfOmZmkDYmX+/+fjj/YzuY7x/eNYulAIAAADAweZAmANfE6WqAJdCWrlvJ8argy6I5YD2Vsj6k0C4MYx1QTCeaxQIq23R2SsIa30gbJ61Oj6eexQI87b07zbgAgAAAMBseyDM8e6gDFxFDExhK0XDJXSNt/dBbNm2HrPOC4RttHs7GPbxr91/dM+L8bWXKPp2MOyevQ2OK/vne+kCZXHOZjsAAAAABNsDYY5bTRzL4bAJdMVKwSwFs7XAdbRcZxy0zgyEQQ51s3Hcm6WIWUbBZVu9fagKqRv+F+PiPvP7eFmJsU0gLI9Jumfr/j4AAAAAsDgjEPK3jYPpO6VAWAZTAAAAAIgEwk/kbwTCdE5fLwYAAABgRCD8RD42EBZfZbZ6EAAAAIAVAiEAAAAAXDGBEAAAAACumEAIAAAAAFdsGAj3+/3xEwAAAAC4fMMVhAAAAADA5QuLBcNnFwiNMcYYY4wxxhhjjDGXP0sPnKb/AT2CMOaFVyY0AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NClick>
+                    <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="Delay_7">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Delay>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEach>
+            <uix:NExtractData sap2010:Annotation.AnnotationText="This process is going to fetch the status of war files and save them to a 'ExtractDataTable' variable" AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Get the status of war files" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Application_Path'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Application_Status'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='table' idx='5' /&gt;&lt;webctrl tag='tbody' idx='1' /&gt;&lt;webctrl tag='tr' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='table' idx='5' /&gt;&lt;webctrl tag='tbody' idx='1' /&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' idx='1' /&gt;&lt;webctrl tag='small' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='text'&gt;&lt;webctrl tag='table' idx='5' /&gt;&lt;webctrl tag='tbody' idx='1' /&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' idx='4' /&gt;&lt;webctrl tag='small' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="436,199" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Rows" MaximumResults="9" ScopeIdentifier="e38c3dea-4234-4685-8ea1-2084a583d84b" Version="V3">
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="16, -151, 1286, 1619" DesignTimeScaleFactor="1" FriendlyName="'Tomcat Web'" FullSelectorArgument="&lt;webctrl tag='BODY' /&gt;" Guid="d6ec95c6-12b7-496a-b7fd-cb3251f1a1dd" InformativeScreenshot="a5d9a07ab069bbb3249dd7cff1e2d4ca.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='/manager' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+              </uix:NExtractData.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NExtractData>
+            <ui:WriteCsvFile AddHeaders="True" sap2010:Annotation.AnnotationText="This process will write down the data saved in the ExtractedDataTable to &quot;Status.csv&quot; file" DataTable="[ExtractDataTable]" Delimitator="Comma" DisplayName="Write Status of war files in Status.csv" FilePath="Status.csv" sap:VirtualizedContainerService.HintSize="436,196" sap2010:WorkflowViewState.IdRef="WriteCsvFile_2" ShouldQuote="True">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:WriteCsvFile>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="436,85" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Selected war files are sucessfully deployed to Tomcat &quot; + vbNewLine +&quot;Check status in 'status.csv' file&quot;]" />
+            <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" sap2010:Annotation.AnnotationText="It will start the excel file to view the status of war files" DisplayName="Start Process" FileName="Status.csv" sap:VirtualizedContainerService.HintSize="436,119" sap2010:WorkflowViewState.IdRef="StartProcess_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:StartProcess>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,52" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,403" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InputDialog Options="{x:Null}" Result="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="338,292" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Select Appropriate War file to Dispay" OptionsString="[ExtractDataTable]" Title="Display" />
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="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" InformativeScreenshot="623e05a14378e6a13a6319da56a2c311.jpg" Selector="&lt;html app='msedge.exe' title='localhost' /&gt;" Url="http://localhost:8080/" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
